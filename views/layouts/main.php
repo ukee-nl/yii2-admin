@@ -1,9 +1,8 @@
 <?php
 
-use yii\bootstrap\NavBar;
-use yii\bootstrap\Nav;
+use yii\bootstrap5\NavBar;
+use yii\bootstrap5\Nav;
 use yii\helpers\Html;
-
 /* @var $this \yii\web\View */
 /* @var $content string */
 
@@ -24,8 +23,7 @@ $this->registerCssFile($url.'/main.css');
         <?php $this->beginBody() ?>
         <?php
         NavBar::begin([
-            'brandLabel' => false,
-            'options' => ['class' => 'navbar-inverse navbar-fixed-top'],
+            'options' => ['class' => ' navbar navbar-expand-lg navbar-dark bg-dark   fixed-top'],
         ]);
 
         if (!empty($this->params['top-menu']) && isset($this->params['nav-items'])) {
@@ -36,7 +34,7 @@ $this->registerCssFile($url.'/main.css');
         }
 
         echo Nav::widget([
-            'options' => ['class' => 'nav navbar-nav navbar-right'],
+            'options' => ['class' => 'navbar-nav ms-auto'],
             'items' => $this->context->module->navbar,
          ]);
         NavBar::end();
@@ -48,7 +46,7 @@ $this->registerCssFile($url.'/main.css');
 
         <footer class="footer">
             <div class="container">
-                <p class="pull-right"><?= Yii::powered() ?></p>
+                <p class="float-end"><?= Yii::powered() ?></p>
             </div>
         </footer>
 
