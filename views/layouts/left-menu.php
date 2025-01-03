@@ -16,7 +16,7 @@ $this->params['nav-items'] = $menus;
 <?php $this->beginContent($controller->module->mainLayout) ?>
 <div class="row">
     <div class="col-sm-3">
-        <div id="manager-menu" class="list-group" <?=Yii::$app->user->isGuest()?'style="display:none;"':"";?> >
+        <div id="manager-menu" class="list-group" <?=Yii::$app->user->isGuest?'style="display:none;"':"";?> >
             <?php
             foreach ($menus as $menu) {
                 $label = Html::tag('i', '', ['class' => 'glyphicon glyphicon-chevron-right pull-right']) .
